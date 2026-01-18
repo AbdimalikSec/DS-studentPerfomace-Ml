@@ -8,7 +8,7 @@ app = FastAPI(title="Student Score Predictor API")
 
 # IMPORTANT: Vercel Python functions run with CWD = repo root
 # so we build the path from the repo root.
-MODEL_PATH = os.path.join(os.getcwd(), "model", "student_model.joblib")
+MODEL_PATH = os.path.join(os.getcwd(), "model", "./student_model.joblib")
 
 model = joblib.load(MODEL_PATH)
 
