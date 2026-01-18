@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "api/index.py",
@@ -15,11 +16,14 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/api/index.py"
+      "dest": "api/index.py"
     },
-      {
-      "src": "/(.*)",
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
       "dest": "/frontend/dist/index.html"
     }
   ]
-  }
+}
