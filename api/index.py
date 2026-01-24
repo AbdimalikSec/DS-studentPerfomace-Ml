@@ -3,6 +3,7 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+
 @app.get("/api/health")
 def health():
     return {"status": "ok"}
@@ -14,11 +15,9 @@ class Input(BaseModel):
 
 @app.post("/api/predict")
 def predict(data: Input):
-    # dummy logic for now (model will replace this)
     predicted_score = (
         data.weekly_self_study_hours * 2
         + data.attendance_percentage * 0.5
         + data.class_participation * 5
     )
-
     return {"predicted_total_score": predicted_score}
