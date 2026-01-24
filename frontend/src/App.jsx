@@ -15,7 +15,7 @@ export default function App() {
     setLoading(true);
 
     try {
-      const res = await fetch("https://ds-backend-iota.vercel.app//api/predict", {
+      const res = await fetch("https://ds-backend-iota.vercel.app/api/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
