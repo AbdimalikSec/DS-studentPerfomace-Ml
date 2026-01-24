@@ -3,6 +3,10 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+@app.get("/api/health")
+def health():
+    return {"status": "ok"}
+
 class Input(BaseModel):
     weekly_self_study_hours: float
     attendance_percentage: float
