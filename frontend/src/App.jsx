@@ -310,7 +310,7 @@ export default function App() {
               {rawScore !== null && (
                 <>
                   <div style={styles.small}>
-                    Clamped for UI (0–100):{" "}
+                    Prediction:{" "}
                     <strong>{clampedScore.toFixed(2)}</strong>
                   </div>
 
@@ -322,8 +322,7 @@ export default function App() {
 
               {outOfRange && (
                 <div style={styles.warn}>
-                  <strong>Out of range:</strong> This is normal for Linear
-                  Regression. Clamp in the API if you want to guarantee 0–100.
+                  <strong>Out of range:</strong> This score is a prediction based on the entered student data.
                 </div>
               )}
 
