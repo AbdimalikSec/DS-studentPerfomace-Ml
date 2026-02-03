@@ -196,7 +196,7 @@ export default function App() {
             </p>
 
             <a
-              href="/student_model_training.ipynb"
+              href="/final project Data science.ipynb"
               download
               style={{
                 display: "inline-block",
