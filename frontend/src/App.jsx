@@ -322,11 +322,6 @@ export default function App() {
           </div>
         </div>
 
-        <div style={{ ...styles.card, color: "#475569", fontSize: 13 }}>
-          <strong>Fix the root cause:</strong> Put clamping + input validation
-          in FastAPI (recommended), or train with a bounded target transform if
-          you want predictions naturally 0–100.
-        </div>
       </div>
     </div>
   );
