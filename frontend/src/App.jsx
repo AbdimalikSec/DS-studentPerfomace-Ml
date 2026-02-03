@@ -322,7 +322,7 @@ export default function App() {
 
               {outOfRange && (
                 <div style={styles.warn}>
-                  <strong>Out of range:</strong> This score is a prediction based on the entered student data.
+                  This is a predicted score, not an exact real score, so it may sometimes be slightly higher than 100.
                 </div>
               )}
 
