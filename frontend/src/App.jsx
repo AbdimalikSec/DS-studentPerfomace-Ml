@@ -28,8 +28,7 @@ export default function App() {
   const rawScore = result === null ? null : Number(result);
   const clampedScore = rawScore === null ? null : clamp(rawScore, 0, 100);
 
-  const outOfRange =
-    rawScore !== null && (rawScore < 0 || rawScore > 100);
+  const outOfRange = rawScore !== null && (rawScore < 0 || rawScore > 100);
 
   const chartData = useMemo(() => {
     if (clampedScore === null) return [];
@@ -77,7 +76,7 @@ export default function App() {
       background:
         "radial-gradient(1000px 500px at 20% 0%, #eef2ff 0%, transparent 60%), radial-gradient(900px 450px at 80% 10%, #ecfeff 0%, transparent 55%), #ffffff",
       fontFamily:
-        'ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial',
+        "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
       color: "#0f172a",
     },
     container: { maxWidth: 920, margin: "0 auto", display: "grid", gap: 16 },
@@ -192,7 +191,14 @@ export default function App() {
           </div>
         </div>
 
-        <div style={styles.twoCol}>
+        <div
+          style={{
+            background: "#fff",
+            border: "1px solid #e5e7eb",
+            borderRadius: 16,
+            padding: 20,
+          }}
+        >
           {/* Inputs */}
           <div style={styles.card}>
             <form onSubmit={handlePredict} style={{ display: "grid", gap: 14 }}>
@@ -208,7 +214,7 @@ export default function App() {
                     max="40"
                     step="0.1"
                     required
-                    style={styles.input}
+                    style={{ padding: 10, borderRadius: 8, border: "1px solid #d1d5db" }}
                   />
                 </label>
 
@@ -223,7 +229,7 @@ export default function App() {
                     max="100"
                     step="0.1"
                     required
-                    style={styles.input}
+                   style={{ padding: 10, borderRadius: 8, border: "1px solid #d1d5db" }}
                   />
                 </label>
 
@@ -238,7 +244,7 @@ export default function App() {
                     max="10"
                     step="0.1"
                     required
-                    style={styles.input}
+                style={{ padding: 10, borderRadius: 8, border: "1px solid #d1d5db" }}
                   />
                 </label>
               </div>
@@ -261,13 +267,13 @@ export default function App() {
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <div style={{ fontWeight: 900 }}>Prediction</div>
                 {rawScore !== null && (
-                  <span style={styles.pill}>
-                    Displayed range: 0–100
-                  </span>
+                  <span style={styles.pill}>Displayed range: 0–100</span>
                 )}
               </div>
 
-              <div style={styles.small}>Raw model output (can be &gt; 100):</div>
+              <div style={styles.small}>
+                Raw model output (can be &gt; 100):
+              </div>
 
               <div style={styles.scoreBig}>
                 {rawScore === null ? "—" : rawScore.toFixed(2)}
