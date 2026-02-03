@@ -189,6 +189,29 @@ export default function App() {
               LinearRegression (unbounded)
             </div>
           </div>
+          <div style={{ ...styles.card, fontSize: 14 }}>
+            <strong>Project Files</strong>
+            <p style={{ marginTop: 6 }}>
+              You can download the Jupyter Notebook used for this project:
+            </p>
+
+            <a
+              href="/student_model_training.ipynb"
+              download
+              style={{
+                display: "inline-block",
+                marginTop: 8,
+                padding: "8px 12px",
+                borderRadius: 8,
+                border: "1px solid #0f172a",
+                color: "#0f172a",
+                fontWeight: 700,
+                textDecoration: "none",
+              }}
+            >
+              Download Notebook (.ipynb)
+            </a>
+          </div>
         </div>
 
         <div
@@ -214,7 +237,11 @@ export default function App() {
                     max="40"
                     step="0.1"
                     required
-                    style={{ padding: 10, borderRadius: 8, border: "1px solid #d1d5db" }}
+                    style={{
+                      padding: 10,
+                      borderRadius: 8,
+                      border: "1px solid #d1d5db",
+                    }}
                   />
                 </label>
 
@@ -229,7 +256,11 @@ export default function App() {
                     max="100"
                     step="0.1"
                     required
-                   style={{ padding: 10, borderRadius: 8, border: "1px solid #d1d5db" }}
+                    style={{
+                      padding: 10,
+                      borderRadius: 8,
+                      border: "1px solid #d1d5db",
+                    }}
                   />
                 </label>
 
@@ -244,7 +275,11 @@ export default function App() {
                     max="10"
                     step="0.1"
                     required
-                style={{ padding: 10, borderRadius: 8, border: "1px solid #d1d5db" }}
+                    style={{
+                      padding: 10,
+                      borderRadius: 8,
+                      border: "1px solid #d1d5db",
+                    }}
                   />
                 </label>
               </div>
@@ -321,7 +356,6 @@ export default function App() {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );
