@@ -179,15 +179,8 @@ export default function App() {
           <div>
             <h1 style={styles.title}>Student Score Predictor</h1>
             <p style={styles.subtitle}>
-              Linear Regression can output values outside 0–100. We show the raw
-              result and also a clamped 0–100 view for the chart.
+               The predicted score is an estimate based on study habits and attendance.
             </p>
-          </div>
-          <div style={{ ...styles.card, padding: 12 }}>
-            <div style={{ fontWeight: 900, fontSize: 14 }}>Model</div>
-            <div style={{ color: "#475569", marginTop: 6, fontSize: 13 }}>
-              LinearRegression (unbounded)
-            </div>
           </div>
           <div style={{ ...styles.card, fontSize: 14 }}>
             <strong>Project Files</strong>
