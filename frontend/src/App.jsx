@@ -329,7 +329,7 @@ export default function App() {
 
               <div style={{ marginTop: 10, height: 240 }}>
                 <div style={{ fontWeight: 900, marginBottom: 8 }}>
-                  Score Chart (0–100 view)
+                  Score Chart (view)
                 </div>
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart
